@@ -27,8 +27,6 @@ const MainContainer = () => {
         .then(storyTitles => setStoryTitles(storyTitles))
     }
 
-    
-
 
     return (
         <div> 
