@@ -1,13 +1,27 @@
 import StoryItem from "./StoryItem"
 
-const StoryList = ({storiesId, storyTitles}) => {
-    const storyItems = storyTitles.map((storyTitle, index) => {
-        return <StoryItem key={index} storyTitle={storyTitle}/>
-    })
+const StoryList = ({searchText, storyTitles}) => {
+
+    // const storyItems = storyTitles.map((storyTitle, index) => {
+    //     return <StoryItem key={index} storyTitle={storyTitle}/>
+        
+    // })
+
+    const filteredItems = storyTitles.filter(item =>
+        item.title.toLowerCase().includes(searchText.toLowerCase())
+      );
+      
+
+
     return (
         <>
-        "test story list"
-        {storyItems}
+        <h1>Hacker News Links</h1>
+        {/* {storyItems} */}
+        {filteredItems.map(item => (
+        <StoryItem key={item.id} item={item} storyTitle={item} />
+        ))}
+
+        
         </>
     )
 }

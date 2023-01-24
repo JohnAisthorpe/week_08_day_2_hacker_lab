@@ -1,6 +1,17 @@
 const StoryItem = ({storyTitle}) => {
+      console.log(storyTitle)
+
     return (
-        <li>{storyTitle.title}</li>
+        <li>
+        
+        {/* <a href={storyTitle.url ? storyTitle.url : `https://news.ycombinator.com/item?id=${storyTitle.id}`}>{storyTitle.title}</a> */}
+
+        <div>{storyTitle.title}</div>
+
+
+
+        
+        </li>
     )
 }
 
